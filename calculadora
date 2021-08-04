@@ -1,0 +1,44 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+float real;
+float referencia;
+float moeda;
+float taxa;
+float dolar;
+float lucro;
+float venda;
+float compra;
+int tipo;
+
+  cout << "Calculadora de p2p, números separados por ponto.\n";
+  cout << "Digite o termo fixo (o que o cliente te dá)\n";
+  cout << "1-Real 2-Moeda\n";
+  cin >> tipo;
+  cout << "Digite o preço referência\n";
+  cin >> referencia;
+  cout << "Digite a taxa\n";
+  cin >> taxa;
+  cout << "Digite o preço do dólar\n";
+  cin >> dolar;
+  cout << "Digite o lucro (%)\n";
+  cin >> lucro;
+
+  if (tipo == 1) {
+cout << "Digite quantos reais\n";
+cin >> real;
+venda = (0.999*real/(referencia*dolar*(1+(0.01*lucro))))-taxa;
+compra = (0.999*real*(1+(lucro*0.01))/(referencia*dolar))-taxa;
+cout << "Vendo:\n" << venda << "\n";
+cout << "Compro:\n" << compra;
+  } else {
+cout << "Digite quantas unidades da moeda\n";
+cin >> moeda;
+venda = 1.001*referencia*(moeda+taxa)*dolar*(1+(lucro*0.01));
+compra = (1.001*referencia*(moeda+taxa)*dolar)/(1+(lucro*0.01));
+cout << "Vendo:\n" << venda << "\n";
+cout << "Compro:\n" << compra;
+  };
+  cout << "\n" << "Obrigado\n";
+}
