@@ -14,7 +14,7 @@ int tipo;
 
   cout << "Calculadora de p2p, números separados por ponto.\n";
   cout << "Doações no endereço nano: \n" ;
-	cout << "nano_1uxndhc1o37ex5azfwrgu8ta54ok4jcftxbfpgtg761dhi45amhb9hoe59oz \n";
+  cout << "nano_1uxndhc1o37ex5azfwrgu8ta54ok4jcftxbfpgtg761dhi45amhb9hoe59oz \n";
   cout << "Digite o termo fixo (o que o cliente te dá)\n";
   cout << "1-Real 2-Moeda\n";
   cin >> tipo;
